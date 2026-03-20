@@ -1,0 +1,4 @@
+*.md
+*.log
+*.json
+.DS_Store

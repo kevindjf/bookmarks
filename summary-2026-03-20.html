@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Signets Twitter - Semaine du 2026-03-20</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Charter:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Charter, 'Iowan Old Style', Georgia, serif; font-size: 20px; line-height: 1.8; color: rgba(41,41,41,1); background: #fff; -webkit-font-smoothing: antialiased; }
+  .header { border-bottom: 1px solid rgba(0,0,0,0.08); padding: 20px 0; margin-bottom: 40px; }
+  .header-inner { max-width: 700px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; }
+  .logo { font-family: -apple-system, 'Helvetica Neue', sans-serif; font-weight: 700; font-size: 15px; letter-spacing: -0.02em; color: #1a8917; text-transform: uppercase; }
+  .header-date { font-family: -apple-system, sans-serif; font-size: 13px; color: rgba(117,117,117,1); }
+  article { max-width: 700px; margin: 0 auto; padding: 0 24px 80px; }
+  .hero { margin-bottom: 48px; text-align: center; padding: 20px 0 40px; border-bottom: 1px solid rgba(0,0,0,0.08); }
+  .hero h1 { font-family: -apple-system, 'Helvetica Neue', sans-serif; font-weight: 700; font-size: 40px; line-height: 1.2; letter-spacing: -0.02em; margin-bottom: 16px; }
+  .hero .subtitle { font-size: 18px; color: rgba(117,117,117,1); }
+  .hero .meta { margin-top: 24px; font-family: -apple-system, sans-serif; font-size: 14px; color: rgba(117,117,117,1); display: flex; align-items: center; justify-content: center; gap: 16px; }
+  .meta-tag { background: #f2f2f2; padding: 4px 12px; border-radius: 100px; font-size: 13px; }
+  .card { background: #fff; border: 1px solid rgba(0,0,0,0.08); border-radius: 12px; padding: 32px; margin-bottom: 32px; transition: box-shadow 0.2s ease; }
+  .card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+  .card h2 { font-family: -apple-system, 'Helvetica Neue', sans-serif; font-weight: 700; font-size: 24px; line-height: 1.3; letter-spacing: -0.01em; margin-bottom: 8px; }
+  .card .author { font-family: -apple-system, sans-serif; font-size: 14px; color: #1a8917; font-weight: 500; margin-bottom: 16px; }
+  .card .author a { color: #1a8917; text-decoration: none; }
+  .card .author a:hover { text-decoration: underline; }
+  .card .tweet-link { font-family: -apple-system, sans-serif; font-size: 13px; margin-bottom: 20px; }
+  .card .tweet-link a { color: rgba(117,117,117,1); text-decoration: none; border-bottom: 1px solid rgba(117,117,117,0.3); }
+  .card .tweet-link a:hover { color: rgba(41,41,41,1); }
+  .section-label { font-family: -apple-system, sans-serif; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(117,117,117,1); margin-top: 20px; margin-bottom: 6px; }
+  .card p { font-size: 18px; line-height: 1.7; margin-bottom: 4px; color: rgba(41,41,41,0.9); }
+  .synthesis { background: linear-gradient(135deg, #f6fff6 0%, #f0f7ff 100%); border: 1px solid rgba(26,137,23,0.15); border-radius: 12px; padding: 40px; margin-top: 48px; }
+  .synthesis h2 { font-family: -apple-system, 'Helvetica Neue', sans-serif; font-weight: 700; font-size: 28px; margin-bottom: 24px; }
+  .synthesis p { font-size: 18px; line-height: 1.7; color: rgba(41,41,41,0.9); margin-bottom: 16px; }
+  .synthesis strong { color: rgba(41,41,41,1); }
+  .footer { max-width: 700px; margin: 0 auto; padding: 32px 24px; text-align: center; font-family: -apple-system, sans-serif; font-size: 13px; color: rgba(117,117,117,1); border-top: 1px solid rgba(0,0,0,0.08); }
+  @media (prefers-color-scheme: dark) {
+    body { background: #121212; color: rgba(227,227,227,1); }
+    .header { border-bottom-color: rgba(255,255,255,0.08); }
+    .hero h1, .card h2 { color: rgba(227,227,227,1); }
+    .hero .subtitle, .header-date, .section-label { color: rgba(168,168,168,1); }
+    .hero { border-bottom-color: rgba(255,255,255,0.08); }
+    .meta-tag { background: #2a2a2a; color: rgba(168,168,168,1); }
+    .card { background: #1e1e1e; border-color: rgba(255,255,255,0.08); }
+    .card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
+    .card p { color: rgba(200,200,200,0.9); }
+    .card .tweet-link a { color: rgba(168,168,168,1); }
+    .synthesis { background: linear-gradient(135deg, #1a2e1a 0%, #1a2233 100%); border-color: rgba(26,137,23,0.25); }
+    .synthesis h2, .synthesis strong { color: rgba(227,227,227,1); }
+    .synthesis p { color: rgba(200,200,200,0.9); }
+    .footer { border-top-color: rgba(255,255,255,0.08); }
+  }
+  @media (max-width: 600px) { .hero h1 { font-size: 28px; } .card, .synthesis { padding: 24px; } body { font-size: 18px; } }
+</style>
+</head>
+<body>
+<div class="header"><div class="header-inner">
+  <a href="index.html" class="logo" style="text-decoration:none;color:#1a8917;">Weekly Bookmarks</a>
+  <span class="header-date">2026-03-20</span>
+</div></div>
+<article>
+<div class="hero">
+  <h1>Tes signets de la semaine</h1>
+  <p class="subtitle">Resume et analyse de ta veille Twitter</p>
+  <div class="meta">
+    <span class="meta-tag">7 signets</span>
+    <span class="meta-tag">Semaine du 2026-03-20</span>
+  </div>
+</div>
+<div class="card">
+<h2>Paperclip + Claude : une entreprise zero humain sur votre machine</h2>
+<div class="author"><a href="https://x.com/RoundtableSpace" target="_blank">@RoundtableSpace</a></div>
+<div class="tweet-link"><a href="https://x.com/RoundtableSpace/status/2034453553918734696" target="_blank">Voir le tweet original</a></div>
+<div class="section-label">Resume</div><p>Paperclip est un outil qui, couple a Claude, permet d'installer et faire tourner une "entreprise automatisee" entierement geree par IA sur votre ordinateur local, sans intervention humaine.</p>
+<div class="section-label">Utilite</div><p>Montre jusqu'ou l'automatisation par agents IA peut aller : gestion de taches business completes (marketing, support, operations) sans humain dans la boucle. Utile pour prototyper des workflows autonomes ou tester des idees business rapidement.</p>
+<div class="section-label">Comment utiliser</div><p>Installer Paperclip, le connecter a Claude, definir les agents et leurs roles (vente, support, contenu...). L'outil orchestre les agents pour executer les taches de maniere autonome.</p>
+<div class="section-label">Mise en place</div><p>Telecharger Paperclip depuis le lien dans la video, configurer l'acces a Claude (cle API ou Claude Desktop), definir les workflows souhaites. Commencer par un cas simple (ex: generation de contenu automatique) avant de scaler.</p>
+</div>
+<div class="card">
+<h2>Regles de workflow orchestration pour Claude Code</h2>
+<div class="author"><a href="https://x.com/roeymiterany (en reponse a melvynx)" target="_blank">@roeymiterany (en reponse a @melvynx)</a></div>
+<div class="tweet-link"><a href="https://x.com/roeymiterany/status/2034363403893113038" target="_blank">Voir le tweet original</a></div>
+<div class="section-label">Resume</div><p>Partage de regles extraites pour orchestrer Claude Code efficacement : activer le mode plan pour toute tache non triviale (3+ etapes), re-planifier immediatement si quelque chose deraille, structurer le travail en phases.</p>
+<div class="section-label">Utilite</div><p>Fournit un framework concret pour eviter que Claude Code parte dans la mauvaise direction sur des taches complexes. Le reflexe "stop and re-plan" est particulierement precieux.</p>
+<div class="section-label">Comment utiliser</div><p>Integrer ces regles dans votre fichier `CLAUDE.md` ou vos skills personnalises. Forcer le mode plan (`/plan`) des qu'une tache depasse 3 etapes.</p>
+<div class="section-label">Mise en place</div><p>Ajouter dans votre `CLAUDE.md` les regles de workflow : plan mode par defaut, re-planification si blocage, validation avant execution. Tester sur un projet existant pour calibrer.</p>
+</div>
+<div class="card">
+<h2>Claude Cowork Dispatch : conversation persistante depuis le telephone</h2>
+<div class="author"><a href="https://x.com/felixrieseberg" target="_blank">@felixrieseberg</a></div>
+<div class="tweet-link"><a href="https://x.com/felixrieseberg/status/2034005731457044577" target="_blank">Voir le tweet original</a></div>
+<div class="section-label">Resume</div><p>Nouvelle fonctionnalite en preview dans Claude Cowork : "Dispatch" permet d'avoir une conversation persistante avec Claude qui tourne sur votre ordinateur. Vous pouvez lui envoyer des messages depuis votre telephone et retrouver le travail termine a votre retour.</p>
+<div class="section-label">Utilite</div><p>Permet de lancer des taches longues (refactoring, generation de code, analyses) et de les superviser a distance. Change le paradigme du dev : on delegue puis on revient voir le resultat.</p>
+<div class="section-label">Comment utiliser</div><p>Telecharger Claude Desktop, activer la fonctionnalite Dispatch, pairer votre telephone. Envoyer des instructions depuis n'importe ou.</p>
+<div class="section-label">Mise en place</div><p>1) Installer/mettre a jour Claude Desktop. 2) Activer Dispatch dans les parametres. 3) Pairer votre appareil mobile. 4) Tester avec une tache simple (ex: "refactorise ce fichier") envoyee depuis votre telephone.</p>
+</div>
+<div class="card">
+<h2>App macOS pour suivre l'usage de Claude Code</h2>
+<div class="author"><a href="https://x.com/JulienDoclot" target="_blank">@JulienDoclot</a></div>
+<div class="tweet-link"><a href="https://x.com/JulienDoclot/status/2033831618134098345" target="_blank">Voir le tweet original</a></div>
+<div class="section-label">Resume</div><p>Une application macOS open source qui se place dans la barre de menu et affiche en temps reel l'usage de session et hebdomadaire de Claude Code, avec un countdown avant le reset des limites.</p>
+<div class="section-label">Utilite</div><p>Indispensable pour gerer son budget de tokens et eviter les mauvaises surprises. Permet de savoir exactement ou on en est dans sa consommation.</p>
+<div class="section-label">Comment utiliser</div><p>Installer l'app, elle se loge dans la barre de menu et affiche automatiquement les stats d'usage.</p>
+<div class="section-label">Mise en place</div><p>Telecharger depuis le lien GitHub mentionne dans le tweet, installer sur macOS, l'app demarre automatiquement avec le systeme.</p>
+</div>
+<div class="card">
+<h2>Mode OpusPlan : Opus pour planifier, Sonnet pour executer</h2>
+<div class="author"><a href="https://x.com/CamilleRoux" target="_blank">@CamilleRoux</a></div>
+<div class="tweet-link"><a href="https://x.com/CamilleRoux/status/2033826924951121946" target="_blank">Voir le tweet original</a></div>
+<div class="section-label">Resume</div><p>En utilisant `/model opusplan` dans Claude Code, on peut configurer Opus (plus puissant) pour la phase de planification et Sonnet (plus rapide/economique) pour l'execution du code.</p>
+<div class="section-label">Utilite</div><p>Optimise le rapport qualite/cout : la reflexion architecturale beneficie de la puissance d'Opus, tandis que l'execution repetitive de code est geree par Sonnet, plus rapide et moins cher.</p>
+<div class="section-label">Comment utiliser</div><p>Taper `/model opusplan` dans Claude Code. La bascule est automatique entre les deux modeles selon la phase.</p>
+<div class="section-label">Mise en place</div><p>Immediat. Lancer Claude Code, taper `/model opusplan`, et commencer a travailler. Comparer les resultats avec votre mode habituel pour evaluer le gain.</p>
+</div>
+<div class="card">
+<h2>Pre-commit hook avec Claude Code : simplify, security, tests et doc</h2>
+<div class="author"><a href="https://x.com/YannDecoopman" target="_blank">@YannDecoopman</a></div>
+<div class="tweet-link"><a href="https://x.com/YannDecoopman/status/2032750137521447116" target="_blank">Voir le tweet original</a></div>
+<div class="section-label">Resume</div><p>Configuration d'un hook pre-commit dans Claude Code qui execute automatiquement : `/simplify` et `/security-review` avant chaque commit, lance les tests (unitaires + navigateur) avec rollback si echec, et met a jour la documentation/Obsidian si necessaire. Le tout en agents paralleles.</p>
+<div class="section-label">Utilite</div><p>Automatise le controle qualite a chaque commit. Empeche d'envoyer du code non revise, non teste ou non documente. Le pattern agents en parallele accelere le processus.</p>
+<div class="section-label">Comment utiliser</div><p>Configurer des hooks dans les settings Claude Code qui declenchent les skills `/simplify` et `/security-review`, puis les tests, avant chaque commit.</p>
+<div class="section-label">Mise en place</div><p>1) Creer les skills `/simplify` et `/security-review` si pas deja presents. 2) Configurer un hook pre-commit dans `settings.json` de Claude Code. 3) Ajouter les commandes de test dans le hook. 4) Configurer la mise a jour doc/Obsidian en post-action.</p>
+</div>
+<div class="card">
+<h2>Claude Code + WordPress : pages SEO automatisees</h2>
+<div class="author"><a href="https://x.com/VengeonsP" target="_blank">@VengeonsP</a></div>
+<div class="tweet-link"><a href="https://x.com/VengeonsP/status/2032506654168588742" target="_blank">Voir le tweet original</a></div>
+<div class="section-label">Resume</div><p>Video tutoriel montrant comment connecter Claude Code a WordPress pour generer automatiquement des pages SEO optimisees, visant un positionnement top 3 sur des mots-cles commerciaux.</p>
+<div class="section-label">Utilite</div><p>Permet de scaler la production de contenu SEO sans redacteur, en ciblant des mots-cles a forte valeur business. Automatise le pipeline recherche de mots-cles → generation de contenu → publication WordPress.</p>
+<div class="section-label">Comment utiliser</div><p>Connecter Claude Code a l'API WordPress (REST API ou WP-CLI), definir les mots-cles cibles, laisser Claude generer et publier les pages.</p>
+<div class="section-label">Mise en place</div><p>1) Configurer l'acces API a votre WordPress. 2) Creer un skill ou un script Claude Code pour la generation SEO. 3) Definir une liste de mots-cles cibles. 4) Tester avec quelques pages avant d'automatiser en masse. 5) Monitorer les positions Google apres publication.</p>
+</div>
+<div class="synthesis">
+<h2>Synthese de la semaine</h2>
+<p>Tendances dominantes :</p>
+<p>1. Claude Code comme plateforme d'orchestration : La majorite des tweets tournent autour de Claude Code, non plus comme simple assistant de code, mais comme une plateforme complete d'orchestration de workflows (hooks, agents paralleles, skills, mode plan). L'ecosysteme de plugins et d'outils tiers explose.</p>
+<p>2. Optimisation du rapport cout/performance : Le mode `opusplan` (Opus pour planifier, Sonnet pour executer) et le suivi d'usage via app macOS montrent une maturite croissante dans la gestion des ressources IA.</p>
+<p>3. Automatisation de bout en bout : Du pre-commit hook a la generation SEO WordPress en passant par Paperclip, la tendance est a l'automatisation complete de chaines de valeur entieres, avec un minimum d'intervention humaine.</p>
+<p>4. Travail asynchrone et a distance : Dispatch (conversation persistante depuis le telephone) marque un tournant : on passe du "coder avec l'IA" au "deleguer a l'IA et superviser a distance".</p>
+<p>5. Qualite et securite integrees : Les hooks pre-commit avec review de securite et simplification automatique montrent que la communaute integre les bonnes pratiques de qualite directement dans le flux de travail IA.</p>
+</div>
+</article>
+<div class="footer">
+  Genere automatiquement chaque vendredi par clix + Claude
+</div>
+</body>
+</html>
