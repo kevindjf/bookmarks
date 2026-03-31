@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Signets Twitter - Semaine du 2026-03-26</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Charter:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Charter, 'Iowan Old Style', Georgia, serif; font-size: 20px; line-height: 1.8; color: rgba(41,41,41,1); background: #fff; -webkit-font-smoothing: antialiased; }
+  .header { border-bottom: 1px solid rgba(0,0,0,0.08); padding: 20px 0; margin-bottom: 40px; position: sticky; top: 0; background: rgba(255,255,255,0.97); backdrop-filter: blur(12px); z-index: 10; }
+  .header-inner { max-width: 1100px; margin: 0 auto; padding: 0 48px; display: flex; align-items: center; justify-content: space-between; }
+  .logo { font-family: -apple-system, 'Helvetica Neue', sans-serif; font-weight: 700; font-size: 15px; letter-spacing: -0.02em; color: #1a8917; text-transform: uppercase; }
+  .header-date { font-family: -apple-system, sans-serif; font-size: 13px; color: rgba(117,117,117,1); }
+  article { max-width: 1100px; margin: 0 auto; padding: 0 48px 80px; }
+  .hero { margin-bottom: 48px; text-align: center; padding: 20px 0 40px; border-bottom: 1px solid rgba(0,0,0,0.08); }
+  .hero h1 { font-family: -apple-system, 'Helvetica Neue', sans-serif; font-weight: 700; font-size: 42px; line-height: 1.2; letter-spacing: -0.02em; margin-bottom: 16px; }
+  .hero .subtitle { font-size: 18px; color: rgba(117,117,117,1); }
+  .hero .meta { margin-top: 24px; font-family: -apple-system, sans-serif; font-size: 14px; color: rgba(117,117,117,1); display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap; }
+  .meta-tag { background: #f2f2f2; padding: 4px 12px; border-radius: 100px; font-size: 13px; }
+  .card { background: #fff; border: 1px solid rgba(0,0,0,0.08); border-radius: 12px; padding: 36px 40px; margin-bottom: 28px; transition: box-shadow 0.2s ease; }
+  .card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+  .card h2 { font-family: -apple-system, 'Helvetica Neue', sans-serif; font-weight: 700; font-size: 24px; line-height: 1.3; letter-spacing: -0.01em; margin-bottom: 8px; }
+  .card .author { font-family: -apple-system, sans-serif; font-size: 14px; color: #1a8917; font-weight: 500; margin-bottom: 16px; }
+  .card .author a { color: #1a8917; text-decoration: none; }
+  .card .author a:hover { text-decoration: underline; }
+  .card .tweet-link { font-family: -apple-system, sans-serif; font-size: 13px; margin-bottom: 20px; }
+  .card .tweet-link a { color: rgba(117,117,117,1); text-decoration: none; border-bottom: 1px solid rgba(117,117,117,0.3); }
+  .card .tweet-link a:hover { color: rgba(41,41,41,1); }
+  .section-label { font-family: -apple-system, sans-serif; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(117,117,117,1); margin-top: 20px; margin-bottom: 6px; }
+  .card p { font-size: 18px; line-height: 1.7; margin-bottom: 4px; color: rgba(41,41,41,0.9); }
+  .synthesis { background: linear-gradient(135deg, #f6fff6 0%, #f0f7ff 100%); border: 1px solid rgba(26,137,23,0.15); border-radius: 12px; padding: 40px 44px; margin: 48px 0; }
+  .synthesis h2 { font-family: -apple-system, 'Helvetica Neue', sans-serif; font-weight: 700; font-size: 28px; margin-bottom: 24px; }
+  .synthesis h3 { font-family: -apple-system, sans-serif; font-weight: 700; font-size: 20px; margin: 20px 0 8px; color: #1a8917; }
+  .synthesis p { font-size: 18px; line-height: 1.7; color: rgba(41,41,41,0.9); margin-bottom: 12px; }
+  .synthesis strong { color: rgba(41,41,41,1); }
+  .footer { max-width: 1100px; margin: 0 auto; padding: 32px 48px; text-align: center; font-family: -apple-system, sans-serif; font-size: 13px; color: rgba(117,117,117,1); border-top: 1px solid rgba(0,0,0,0.08); }
+  @media (prefers-color-scheme: dark) {
+    body { background: #121212; color: rgba(227,227,227,1); }
+    .header { background: rgba(18,18,18,0.97); border-bottom-color: rgba(255,255,255,0.08); }
+    .hero h1, .card h2 { color: rgba(227,227,227,1); }
+    .hero .subtitle, .header-date, .section-label { color: rgba(168,168,168,1); }
+    .hero { border-bottom-color: rgba(255,255,255,0.08); }
+    .meta-tag { background: #2a2a2a; color: rgba(168,168,168,1); }
+    .card { background: #1e1e1e; border-color: rgba(255,255,255,0.08); }
+    .card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
+    .card p { color: rgba(200,200,200,0.9); }
+    .card .tweet-link a { color: rgba(168,168,168,1); }
+    .synthesis { background: linear-gradient(135deg, #1a2e1a 0%, #1a2233 100%); border-color: rgba(26,137,23,0.25); }
+    .synthesis h2, .synthesis strong { color: rgba(227,227,227,1); }
+    .synthesis h3 { color: #4aba47; }
+    .synthesis p { color: rgba(200,200,200,0.9); }
+    .footer { border-top-color: rgba(255,255,255,0.08); }
+  }
+  @media (max-width: 768px) {
+    article, .header-inner, .footer { padding-left: 24px; padding-right: 24px; }
+    .hero h1 { font-size: 28px; }
+    .card { padding: 24px; }
+    .synthesis { padding: 24px; }
+    body { font-size: 18px; }
+  }
+</style>
+</head>
+<body>
+<div class="header"><div class="header-inner">
+  <a href="index.html" class="logo" style="text-decoration:none;color:#1a8917;">Weekly Bookmarks</a>
+  <span class="header-date">2026-03-26</span>
+</div></div>
+<article>
+<div class="hero">
+  <h1>Tes signets de la semaine</h1>
+  <p class="subtitle">Resume et analyse de ta veille Twitter</p>
+  <div class="meta">
+    <span class="meta-tag">40 signets</span>
+    <span class="meta-tag">Semaine du 2026-03-26</span>
+  </div>
+</div>
+<div class="synthesis">
+<h2>Synthese de la semaine</h2>
+<h3>1. Claude Code : l'ecosysteme explose</h3>
+<p>La majorite des signets tournent autour de Claude Code, qui s'impose comme la plateforme centrale du dev assiste par IA. Trois axes majeurs :</p>
+<p>- Taches cloud recurrentes (`/schedule`) : Claude Code peut desormais tourner en autonomie dans le cloud — review de PRs, maintenance de docs, triage d'issues — sans machine locale active. C'est le passage du copilote a l'agent autonome.</p>
+<p>- Multi-agents et orchestration : Architecture a 3 agents (orchestrateur/executeur/verificateur) documentee par Anthropic, visualisation des Agent Teams, communication inter-instances via `claude-peers-mcp`. Le paradigme passe du "un agent, une tache" au "une equipe d'agents coordonnes".</p>
+<p>- Personnalisation avancee : Skills custom (`/interview`, gstack de Garry Tan), pre-commit hooks intelligents (`/simplify` + `/security-review`), mode `opusplan` (Opus planifie, Sonnet execute), nouveau `/init` interactif. Claude Code devient un framework qu'on configure a son image.</p>
+<h3>2. Design et frontend : l'IA entre dans Figma</h3>
+<p>Convergence nette entre IA et outils de design :</p>
+<p>- MCP Figma permet a Claude de designer directement sur le canvas avec connaissance du design system.</p>
+<p>- Claude Code Desktop offre la selection DOM par clic — plus besoin de decrire, on pointe.</p>
+<p>- Google Stitch genere des landing pages completes gratuitement.</p>
+<p>Le message est clair : le mur entre designer et developpeur s'effondre.</p>
+<h3>3. SEO automatise : la production de contenu a l'echelle</h3>
+<p>Plusieurs signets convergent vers l'utilisation de Claude pour le SEO programmatique : generation de pages WordPress optimisees, 9 prompts avances pour remplacer une agence SEO, production en masse de contenu positionne. L'IA devient une machine a trafic organique pour qui maitrise les prompts.</p>
+<h3>4. Outillage et productivite dev</h3>
+<p>Un ecosysteme d'outils peripheriques se structure :</p>
+<p>- Kaku : terminal macOS avec IA integree (correction d'erreurs automatique)</p>
+<p>- Claude-Mem : memoire persistante entre sessions (-95% de tokens)</p>
+<p>- App de suivi de quotas macOS pour monitorer sa consommation</p>
+<p>- Plugin statusline pour visualiser l'activite en temps reel</p>
+<p>- CLI de signets Twitter sans API payante pour alimenter sa veille</p>
+<h3>5. Formation et ressources officielles</h3>
+<p>Anthropic investit massivement dans l'education :</p>
+<p>- Academie gratuite : 13 cours avec certifications (MCP, API, Claude Code)</p>
+<p>- Cheat sheets de 33 pages : une pour le design/build, une pour la creation de skills</p>
+<p>- Conseils du createur Boris Cherny (104k bookmarks — le tweet de reference)</p>
+<h3>6. Transparence et vigilance</h3>
+<p>Le scandale Cursor/Kimi K2.5 rappelle que les benchmarks marketing ne valent rien sans verification independante. Un signal d'alerte utile dans un marche ou chaque outil revendique la suprematie.</p>
+<p>---</p>
+<p>Tendance dominante : On passe de "l'IA qui assiste" a "l'IA qui opere" — agents autonomes, taches planifiees, orchestration multi-agents, design automatise. Claude Code n'est plus un outil, c'est une plateforme sur laquelle on deploie des equipes d'agents specialises. Ceux qui investissent maintenant dans la configuration (skills, hooks, workflows) prendront une avance considerable.</p>
+</div>
+<div class="card">
+<h2>[Plugin statusline pour Claude Code]</h2>
+<div class="author"><a href="https://x.com/CamilleRoux" target="_blank">@CamilleRoux</a></div>
+<div class="tweet-link"><a href="https://x.com/CamilleRoux/status/2037079612354605521" target="_blank">Voir le tweet original</a></div>
+<div class="section-label">Resume</div><p>Un plugin pour Claude Code qui affiche en temps reel dans la statusline du terminal l'usage du contexte, les outils actifs, les agents en cours et la progression des taches.</p>
+<div class="section-label">Utilite</div><p>Permet de garder une visibilite permanente sur ce que fait Claude Code sans interrompre son workflow, notamment pour surveiller la consommation de contexte et l'avancement des sous-agents.</p>
+<div class="section-label">Comment utiliser</div><p>Installer le plugin et l'activer dans sa configuration Claude Code pour obtenir un affichage permanent des metriques dans le terminal.</p>
+<div class="section-label">Mise en place</div><p>Consulter le repo lie au tweet, suivre les instructions d'installation, et configurer la statusline dans les settings de Claude Code.</p>
+</div>
+<div class="card">
+<h2>[Claude : outils de travail disponibles sur mobile]</h2>
+<div class="author"><a href="https://x.com/claudeai" target="_blank">@claudeai</a></div>
+<div class="tweet-link"><a href="https://x.com/claudeai/status/2036850783526719610" target="_blank">Voir le tweet original</a></div>
+<div class="section-label">Resume</div><p>Les integrations d'outils professionnels dans Claude (Figma, Canva, Amplitude, etc.) sont desormais accessibles depuis l'application mobile.</p>
+<div class="section-label">Utilite</div><p>Permet de consulter des designs Figma, creer des slides Canva ou verifier des dashboards Amplitude directement depuis son telephone via Claude, rendant l'assistant IA utilisable en mobilite.</p>
+<div class="section-label">Comment utiliser</div><p>Ouvrir Claude sur mobile et invoquer les outils connectes comme on le ferait sur desktop.</p>
+<div class="section-label">Mise en place</div><p>Mettre a jour l'app Claude mobile, s'assurer que les integrations (Figma, Canva, Amplitude) sont connectees a son compte Claude.</p>
+</div>
+<div class="card">
+<h2>[Architecture multi-agents d'Anthropic pour le coding autonome]</h2>
+<div class="author"><a href="https://x.com/thismacapital" target="_blank">@thismacapital</a></div>
+<div class="tweet-link"><a href="https://x.com/thismacapital/status/2036549061789020279" target="_blank">Voir le tweet original</a></div>
+<div class="section-label">Resume</div><p>Anthropic a developpe une architecture a 3 agents pour permettre a Claude de coder en autonomie pendant des heures sans degradation de qualite. Le systeme resout le probleme de saturation de la fenetre de contexte et de l'auto-evaluation trop optimiste du modele.</p>
+<div class="section-label">Utilite</div><p>Comprendre comment structurer des systemes multi-agents pour des taches longues et complexes. Cette architecture est directement applicable a quiconque construit des pipelines d'agents IA.</p>
+<div class="section-label">Comment utiliser</div><p>Lire le blog post Anthropic Engineering pour comprendre le pattern orchestrateur/executeur/verificateur et l'appliquer a ses propres workflows d'agents.</p>
+<div class="section-label">Mise en place</div><p>Etudier l'article source, identifier les taches longues dans son workflow de dev, et implementer une separation similaire entre planification, execution et verification.</p>
+</div>
+<div class="card">
+<h2>[Blog Anthropic : harness multi-agents pour le frontend et le dev autonome]</h2>
+<div class="author"><a href="https://x.com/AnthropicAI" target="_blank">@AnthropicAI</a></div>
+<div class="tweet-link"><a href="https://x.com/AnthropicAI/status/2036481033621623056" target="_blank">Voir le tweet original</a></div>
+<div class="section-label">Resume</div><p>Article du blog engineering d'Anthropic expliquant comment ils utilisent un harness multi-agents pour ameliorer Claude en design frontend et en ingenierie logicielle autonome longue duree.</p>
+<div class="section-label">Utilite</div><p>Source primaire et technique sur l'approche multi-agents d'Anthropic — indispensable pour comprendre les patterns architecturaux derriere Claude Code.</p>
+<div class="section-label">Comment utiliser</div><p>Lire l'article complet pour s'inspirer des patterns d'orchestration d'agents dans ses propres projets.</p>
+<div class="section-label">Mise en place</div><p>Acceder au blog via le lien, etudier l'architecture proposee, et experimenter avec des configurations similaires dans Claude Code ou d'autres frameworks d'agents.</p>
+</div>
+<div class="card">
+<h2>[Figma MCP : designer avec Claude Code dans Figma]</h2>
+<div class="author"><a href="https://x.com/trq212" target="_blank">@trq212</a></div>
+<div class="tweet-link"><a href="https://x.com/trq212/status/2036442891346755787" target="_blank">Voir le tweet original</a></div>
+<div class="section-label">Resume</div><p>Mise a jour majeure du MCP Figma qui permet desormais d'utiliser Claude Code pour designer directement sur le canvas Figma, avec acces complet au design system du projet.</p>
+<div class="section-label">Utilite</div><p>Revolutionne le workflow design/dev en permettant a un agent IA de manipuler directement Figma avec la connaissance du design system, eliminant les allers-retours manuels.</p>
+<div class="section-label">Comment utiliser</div><p>Installer le MCP Figma (`use_figma`), le connecter a Claude Code, puis donner des instructions en langage naturel pour creer ou modifier des designs.</p>
+<div class="section-label">Mise en place</div><p>Activer la beta ouverte du MCP Figma, configurer la connexion dans Claude Code, importer ses skills/design system, et commencer a prototyper via prompts.</p>
+</div>
+<div class="card">
+<h2>[Claude Code : taches planifiees dans le cloud avec /schedule]</h2>
+<div class="author"><a href="https://x.com/noahzweben" target="_blank">@noahzweben</a></div>
+<div class="tweet-link"><a href="https://x.com/noahzweben/status/2036129220959805859" target="_blank">Voir le tweet original</a></div>
+<div class="section-label">Resume</div><p>Nouvelle commande `/schedule` dans Claude Code permettant de creer des jobs recurrents dans le cloud, directement depuis le terminal. Utilise en interne chez Anthropic pour resoudre automatiquement les echecs CI, mettre a jour la documentation, etc.</p>
+<div class="section-label">Utilite</div><p>Permet d'automatiser des taches repetitives de maintenance de code sans garder Claude Code ouvert localement — ideal pour la CI/CD, la revue de PRs et la maintenance de docs.</p>
+<div class="section-label">Comment utiliser</div><p>Taper `/schedule` dans Claude Code, definir un repo, un prompt et une frequence. L'agent tourne dans le cloud selon le planning defini.</p>
+<div class="section-label">Mise en place</div><p>Mettre a jour Claude Code, utiliser `/schedule` pour configurer ses premieres automatisations (ex: review quotidienne des PRs, mise a jour hebdomadaire de la doc).</p>
+</div>
+<div class="card">
+<h2>[claude-peers-mcp : communication entre instances Claude Code]</h2>
+<div class="author"><a href="https://x.com/CamilleRoux" target="_blank">@CamilleRoux</a></div>
+<div class="tweet-link"><a href="https://x.com/CamilleRoux/status/2035992496568737806" target="_blank">Voir le tweet original</a></div>
+<div class="section-label">Resume</div><p>Un serveur MCP qui permet a plusieurs instances Claude Code de se decouvrir et de communiquer entre elles en temps reel via un broker local.</p>
+<div class="section-label">Utilite</div><p>Ouvre la voie a des architectures multi-agents locales ou plusieurs Claude Code collaborent sur differentes parties d'un projet simultanement.</p>
+<div class="section-label">Comment utiliser</div><p>Installer claude-peers-mcp, lancer le broker local, puis demarrer plusieurs instances Claude Code qui pourront echanger des messages et coordonner leur travail.</p>
+<div class="section-label">Mise en place</div><p>Cloner le repo, installer les dependances, configurer le MCP dans chaque instance Claude Code. Projet recent : tester en environnement non-critique d'abord.</p>
+</div>
+<div class="card">
+<h2>[Nouveau /init interactif pour Claude Code]</h2>
+<div class="author"><a href="https://x.com/trq212" target="_blank">@trq212</a></div>
+<div class="tweet-link"><a href="https://x.com/trq212/status/2035799806640115806" target="_blank">Voir le tweet original</a></div>
+<div class="section-label">Resume</div><p>Une nouvelle version de la commande `/init` de Claude Code est en test : elle interviewe l'utilisateur et aide a configurer les skills, hooks et preferences du projet automatiquement.</p>
+<div class="section-label">Utilite</div><p>Simplifie considerablement l'onboarding sur un nouveau repo avec Claude Code en guidant la configuration au lieu de la laisser manuelle.</p>
+<div class="section-label">Comment utiliser</div><p>Lancer Claude Code avec la variable d'environnement `CLAUDE_CODE_NEW_INIT=1 claude` puis executer `/init`.</p>
+<div class="section-label">Mise en place</div><p>Exporter la variable `CLAUDE_CODE_NEW_INIT=1`, lancer Claude Code, suivre l'interview interactive pour configurer le projet. Donner du feedback a l'equipe Anthropic.</p>
+</div>
+<div class="card">
+<h2>[Taches cloud recurrentes dans Claude Code]</h2>
+<div class="author"><a href="https://x.com/CamilleRoux" target="_blank">@CamilleRoux</a></div>
+<div class="tweet-link"><a href="https://x.com/CamilleRoux/status/2035627576928972977" target="_blank">Voir le tweet original</a></div>
+<div class="section-label">Resume</div><p>Presentation des taches programmees cloud de Claude Code : connecter un repo, definir un prompt et une recurrence, et l'agent tourne en autonomie pour reviewer les PRs, generer du code depuis les issues ou maintenir la documentation.</p>
+<div class="section-label">Utilite</div><p>Automatisation complete du cycle de maintenance logicielle sans intervention humaine, avec un agent qui tourne en continu dans le cloud.</p>
+<div class="section-label">Comment utiliser</div><p>Configurer une tache recurrente via Claude Code en specifiant le repo cible, le prompt d'instruction et la frequence d'execution.</p>
+<div class="section-label">Mise en place</div><p>Identifier les taches repetitives de son workflow (review PR, mise a jour docs, triage issues), les configurer comme taches planifiees dans Claude Code.</p>
+</div>
+<div class="card">
+<h2>[Taches cloud recurrentes - annonce officielle]</h2>
+<div class="author"><a href="https://x.com/noahzweben" target="_blank">@noahzweben</a></div>
+<div class="tweet-link"><a href="https://x.com/noahzweben/status/2035122989533163971" target="_blank">Voir le tweet original</a></div>
+<div class="section-label">Resume</div><p>Annonce officielle de la possibilite de planifier des taches recurrentes cloud dans Claude Code : definir un repo, un planning et un prompt, et Claude execute dans le cloud sans necessiter de machine locale active.</p>
+<div class="section-label">Utilite</div><p>Liberation totale de la machine locale — les automatisations IA tournent dans l'infrastructure cloud d'Anthropic selon un cron defini.</p>
+<div class="section-label">Comment utiliser</div><p>Definir ses taches via l'interface Claude Code, specifier un ou plusieurs repos, un schedule cron et le prompt d'instruction.</p>
+<div class="section-label">Mise en place</div><p>Mettre a jour Claude Code, experimenter avec une tache simple (ex: rapport quotidien sur les issues ouvertes), puis etendre progressivement.</p>
+</div>
+<div class="card">
+<h2>[Claude Code Desktop : selection directe d'elements DOM]</h2>
+<div class="author"><a href="https://x.com/lydiahallie" target="_blank">@lydiahallie</a></div>
+<div class="tweet-link"><a href="https://x.com/lydiahallie/status/2035088515332284651" target="_blank">Voir le tweet original</a></div>
+<div class="section-label">Resume</div><p>Claude Code en version desktop permet de selectionner directement des elements DOM dans le navigateur. Claude recoit le tag, les classes, les styles, le HTML environnant et un screenshot. Pour les apps React, il recupere aussi le fichier source, le nom du composant et les props.</p>
+<div class="section-label">Utilite</div><p>Enorme gain de temps pour le dev frontend : plus besoin de decrire quel composant modifier, il suffit de le cliquer. Contexte riche transmis automatiquement a Claude.</p>
+<div class="section-label">Comment utiliser</div><p>Utiliser Claude Code Desktop, ouvrir son app dans le navigateur integre, cliquer sur l'element a modifier, puis donner ses instructions a Claude.</p>
+<div class="section-label">Mise en place</div><p>Installer Claude Code Desktop (app Mac/Windows), ouvrir son projet, lancer le navigateur integre et commencer a pointer-cliquer les elements a modifier.</p>
+</div>
+<div class="card">
+<h2>[Scandale Cursor Composer 2 / Kimi K2.5]</h2>
+<div class="author"><a href="https://x.com/coinacademy_fr" target="_blank">@coinacademy_fr</a></div>
+<div class="tweet-link"><a href="https://x.com/coinacademy_fr/status/2035071204001030294" target="_blank">Voir le tweet original</a></div>
+<div class="section-label">Resume</div><p>Cursor a presente son modele "Composer 2" comme depassant GPT et Claude Opus sur les benchmarks, mais des developpeurs ont decouvert qu'il s'agit en realite du modele Kimi K2.5 de la startup Moonshot avec un fine-tuning.</p>
+<div class="section-label">Utilite</div><p>Alerte importante sur la transparence des outils IA de coding — rappelle de verifier l'origine reelle des modeles utilises par les outils et de ne pas se fier aveuglément aux benchmarks marketing.</p>
+<div class="section-label">Comment utiliser</div><p>Garder un oeil critique sur les annonces de modeles proprietaires, verifier les benchmarks independamment, et comparer soi-meme les performances sur ses propres cas d'usage.</p>
+<div class="section-label">Mise en place</div><p>Tester les outils sur ses propres projets plutot que se fier aux benchmarks, suivre les discussions communautaires pour detecter ce type de probleme.</p>
+</div>
+<div class="card">
+<h2>[Google Stitch : generation de landing pages par IA]</h2>
+<div class="author"><a href="https://x.com/NumaBuilds" target="_blank">@NumaBuilds</a></div>
+<div class="tweet-link"><a href="https://x.com/NumaBuilds/status/2035017771797365152" target="_blank">Voir le tweet original</a></div>
+<div class="section-label">Resume</div><p>Google lance Stitch, un outil IA capable de generer des landing pages completes (design system, sections, front integre) a partir d'idees et de copywriting en quelques minutes, gratuitement.</p>
+<div class="section-label">Utilite</div><p>Permet de prototyper rapidement des landing pages sans competences design ni budget freelance, ideal pour valider des idees ou creer des MVPs.</p>
+<div class="section-label">Comment utiliser</div><p>Acceder a Google Stitch, fournir ses idees et son copywriting, et obtenir une landing page complete avec design et code front-end.</p>
+<div class="section-label">Mise en place</div><p>Acceder a Stitch via Google, preparer son contenu textuel et sa direction artistique, generer la page, puis ajuster/deployer le resultat.</p>
+</div>
+<div class="card">
+<h2>Paperclip + Claude : une entreprise automatisee sans humain</h2>
+<div class="author"><a href="https://x.com/RoundtableSpace" target="_blank">@RoundtableSpace</a></div>
+<div class="tweet-link"><a href="https://x.com/RoundtableSpace/status/2034453553918734696" target="_blank">Voir le tweet original</a></div>
+<div class="section-label">Resume</div><p>Paperclip, combine avec Claude, permet d'installer sur son ordinateur une "entreprise zero humain" — un systeme d'agents IA autonomes qui gerent des taches business de bout en bout.</p>
+<div class="section-label">Utilite</div><p>Montre l'evolution vers des systemes multi-agents capables d'orchestrer des workflows complets sans intervention humaine. Utile pour comprendre le potentiel (et les limites) de l'automatisation par IA.</p>
+<div class="section-label">Comment utiliser</div><p>Explorer Paperclip pour identifier des taches repetitives dans son activite (emails, reporting, gestion de contenu) et tester l'automatisation via des agents Claude.</p>
+<div class="section-label">Mise en place</div><p>Installer Paperclip depuis le repo indique, configurer Claude comme moteur d'IA, definir les workflows a automatiser, puis tester sur des taches non critiques avant de generaliser.</p>
+</div>
+<div class="card">
+<h2>Workflow Orchestration : regles de planification pour Claude Code</h2>
+<div class="author"><a href="https://x.com/roeymiterany" target="_blank">@roeymiterany</a></div>
+<div class="tweet-link"><a href="https://x.com/roeymiterany/status/2034363403893113038" target="_blank">Voir le tweet original</a></div>
+<div class="section-label">Resume</div><p>Partage de regles d'orchestration de workflow pour Claude Code, notamment l'utilisation systematique du mode plan pour toute tache non triviale (3+ etapes ou decisions architecturales), avec arret et re-planification si ca deraille.</p>
+<div class="section-label">Utilite</div><p>Offre un framework concret pour structurer ses interactions avec Claude Code et eviter les derives lors de taches complexes.</p>
+<div class="section-label">Comment utiliser</div><p>Integrer ces regles dans son fichier CLAUDE.md ou ses skills pour forcer le mode plan sur les taches complexes.</p>
+<div class="section-label">Mise en place</div><p>Ajouter les regles de "Plan Node Default" dans la configuration de son projet Claude Code. Systematiser le reflexe `/plan` avant toute tache de plus de 3 etapes.</p>
+</div>
+<div class="card">
+<h2>Claude Cowork Dispatch : conversation persistante accessible depuis le telephone</h2>
+<div class="author"><a href="https://x.com/felixrieseberg" target="_blank">@felixrieseberg</a></div>
+<div class="tweet-link"><a href="https://x.com/felixrieseberg/status/2034005731457044577" target="_blank">Voir le tweet original</a></div>
+<div class="section-label">Resume</div><p>Anthropic lance "Dispatch" dans Claude Cowork (research preview) : une conversation persistante avec Claude qui tourne sur votre ordinateur. On peut lui envoyer des messages depuis son telephone et retrouver le travail termine en revenant.</p>
+<div class="section-label">Utilite</div><p>Change radicalement le workflow dev : on peut lancer des taches lourdes, partir, et revenir au resultat. C'est l'agent IA asynchrone qui travaille pendant qu'on fait autre chose.</p>
+<div class="section-label">Comment utiliser</div><p>Ideal pour des taches longues (refactoring, generation de tests, migration de code) qu'on lance avant de quitter son poste.</p>
+<div class="section-label">Mise en place</div><p>Telecharger Claude Desktop, activer la fonctionnalite Cowork, puis pairer son telephone. Envoyer des instructions depuis mobile et recuperer les resultats sur desktop.</p>
+</div>
+<div class="card">
+<h2>App macOS pour suivre sa consommation Claude Code</h2>
+<div class="author"><a href="https://x.com/JulienDoclot" target="_blank">@JulienDoclot</a></div>
+<div class="tweet-link"><a href="https://x.com/JulienDoclot/status/2033831618134098345" target="_blank">Voir le tweet original</a></div>
+<div class="section-label">Resume</div><p>Une app open source macOS qui se loge dans la barre de menu et affiche l'usage de session et hebdomadaire de Claude Code / Codex, avec un countdown avant le reset des quotas.</p>
+<div class="section-label">Utilite</div><p>Indispensable pour les utilisateurs intensifs de Claude Code qui veulent eviter de depasser leurs quotas ou planifier leur usage sur la semaine.</p>
+<div class="section-label">Comment utiliser</div><p>Installer l'app et la garder dans sa barre de menu pour monitorer sa consommation en temps reel.</p>
+<div class="section-label">Mise en place</div><p>Recuperer l'app depuis le lien GitHub partage dans le tweet, l'installer sur macOS, et la configurer avec ses identifiants Claude.</p>
+</div>
+<div class="card">
+<h2>Astuce Claude Code : mode opusplan (Opus pour planifier, Sonnet pour executer)</h2>
+<div class="author"><a href="https://x.com/CamilleRoux" target="_blank">@CamilleRoux</a></div>
+<div class="tweet-link"><a href="https://x.com/CamilleRoux/status/2033826924951121946" target="_blank">Voir le tweet original</a></div>
+<div class="section-label">Resume</div><p>En tapant `/model opusplan` dans Claude Code, on active un mode hybride ou Opus (plus puissant) gere la planification et Sonnet (plus rapide/economique) gere l'execution du code.</p>
+<div class="section-label">Utilite</div><p>Permet d'optimiser le ratio qualite/cout : la reflexion strategique est confiee au modele le plus capable, tandis que l'execution repetitive est deleguee au modele plus leger.</p>
+<div class="section-label">Comment utiliser</div><p>Taper `/model opusplan` dans Claude Code avant de commencer une session de travail complexe.</p>
+<div class="section-label">Mise en place</div><p>Ouvrir Claude Code, entrer la commande `/model opusplan`, puis travailler normalement. Claude switchera automatiquement entre Opus et Sonnet selon la phase (planification vs execution).</p>
+</div>
+<div class="card">
+<h2>Pre-commit hooks intelligents avec Claude Code</h2>
+<div class="author"><a href="https://x.com/YannDecoopman" target="_blank">@YannDecoopman</a></div>
+<div class="tweet-link"><a href="https://x.com/YannDecoopman/status/2032750137521447116" target="_blank">Voir le tweet original</a></div>
+<div class="section-label">Resume</div><p>Configuration de pre-commit hooks dans Claude Code qui lancent automatiquement `/simplify` et `/security-review` avant chaque commit, executent les tests, font un rollback si ca casse, et mettent a jour la documentation Obsidian. Claude envoie des agents en parallele.</p>
+<div class="section-label">Utilite</div><p>Automatise la qualite du code : chaque commit est simplifie, audite en securite, teste et documente — sans effort manuel.</p>
+<div class="section-label">Comment utiliser</div><p>Configurer des hooks pre-commit dans Claude Code qui declenchent des skills de review et de test avant chaque push.</p>
+<div class="section-label">Mise en place</div><p>Dans les settings Claude Code, creer des hooks pre-commit qui appellent `/simplify`, `/security-review`, lancent les tests unitaires/e2e, et mettent a jour la doc. Configurer le rollback automatique en cas d'echec des tests.</p>
+</div>
+<div class="card">
+<h2>Claude Code + WordPress : generation automatique de pages SEO</h2>
+<div class="author"><a href="https://x.com/VengeonsP" target="_blank">@VengeonsP</a></div>
+<div class="tweet-link"><a href="https://x.com/VengeonsP/status/2032506654168588742" target="_blank">Voir le tweet original</a></div>
+<div class="section-label">Resume</div><p>Tutoriel video montrant comment connecter Claude Code a WordPress pour generer automatiquement des pages optimisees SEO, visant un positionnement top 3 sur des mots-cles strategiques.</p>
+<div class="section-label">Utilite</div><p>Permet d'automatiser la creation de contenu SEO a grande echelle en combinant la puissance de Claude avec WordPress.</p>
+<div class="section-label">Comment utiliser</div><p>Suivre le tutoriel pour connecter Claude Code a l'API WordPress, definir ses mots-cles cibles, et lancer la generation de pages.</p>
+<div class="section-label">Mise en place</div><p>Configurer l'acces API WordPress (REST API ou WP-CLI), creer un workflow Claude Code avec des prompts de generation de contenu SEO, puis automatiser la publication via des scripts.</p>
+</div>
+<div class="card">
+<h2>gstack : le setup de skills Claude Code du CEO de Y Combinator</h2>
+<div class="author"><a href="https://x.com/Frenchiee (citant garrytan)" target="_blank">@Frenchiee (citant @garrytan)</a></div>
+<div class="tweet-link"><a href="https://x.com/Frenchiee/status/2032136134260666849" target="_blank">Voir le tweet original</a></div>
+<div class="section-label">Resume</div><p>Garry Tan (CEO de Y Combinator) partage en open source son setup de skills Claude Code appele "gstack". Il transforme Claude Code en 6 specialistes : `/plan-ceo-review` pour challenger les decisions avant de coder, et d'autres skills de specialisation.</p>
+<div class="section-label">Utilite</div><p>Acces direct au workflow d'un des leaders tech les plus influents. Permet de structurer Claude Code comme une equipe de specialistes plutot qu'un assistant generique.</p>
+<div class="section-label">Comment utiliser</div><p>Installer gstack en collant une courte commande dans Claude Code, puis utiliser les differentes skills selon la phase de travail (planification, review, execution).</p>
+<div class="section-label">Mise en place</div><p>Aller sur le repo GitHub de gstack, copier la commande d'installation, la coller dans Claude Code. Explorer chaque skill disponible (`/plan-ceo-review`, etc.) et les integrer dans son workflow quotidien.</p>
+</div>
+<div class="card">
+<h2>CLI open source pour recuperer ses signets Twitter sans API payante</h2>
+<div class="author"><a href="https://x.com/spideystreet" target="_blank">@spideystreet</a></div>
+<div class="tweet-link"><a href="https://x.com/spideystreet/status/2031298003907014825" target="_blank">Voir le tweet original</a></div>
+<div class="section-label">Resume</div><p>Un CLI open source qui permet de recuperer ses signets Twitter sans payer l'API X a 100$/mois. Compatible avec OpenClaw, Claude Code et d'autres agents IA pour faire de la veille automatisee.</p>
+<div class="section-label">Utilite</div><p>Permet de brancher ses signets Twitter directement dans un pipeline d'agents IA pour automatiser sa veille tech, sans cout d'API.</p>
+<div class="section-label">Comment utiliser</div><p>Installer le CLI, le connecter a son compte Twitter, puis l'utiliser comme source de donnees pour ses agents IA (Claude Code, OpenClaw).</p>
+<div class="section-label">Mise en place</div><p>Cloner le repo GitHub, installer les dependances, configurer l'authentification Twitter (sans cle API payante), puis integrer le CLI dans son workflow d'agent IA pour extraire et analyser ses signets automatiquement.</p>
+</div>
+<div class="card">
+<h2>Cheat sheet Anthropic de 33 pages pour designer et builder avec Claude</h2>
+<div class="author"><a href="https://x.com/desgnwitkinsley" target="_blank">@desgnwitkinsley</a></div>
+<div class="tweet-link"><a href="https://x.com/desgnwitkinsley/status/2030843896800923667" target="_blank">Voir le tweet original</a></div>
+<div class="section-label">Resume</div><p>Anthropic publie un guide de 33 pages couvrant les meilleures pratiques pour utiliser Claude dans la conception et le developpement de produits.</p>
+<div class="section-label">Utilite</div><p>Ressource officielle et exhaustive pour maitriser les capacites de Claude en design et en build. Particulierement utile pour les designers et developpeurs front-end.</p>
+<div class="section-label">Comment utiliser</div><p>Lire le guide pour decouvrir les patterns de prompting specifiques au design et au developpement, puis les appliquer dans ses projets.</p>
+<div class="section-label">Mise en place</div><p>Telecharger le PDF depuis le lien partage, identifier les sections pertinentes a son workflow, et integrer les techniques recommandees dans ses interactions avec Claude.</p>
+</div>
+<div class="card">
+<h2>Cheat sheet Anthropic de 33 pages pour builder des skills Claude</h2>
+<div class="author"><a href="https://x.com/RoundtableSpace" target="_blank">@RoundtableSpace</a></div>
+<div class="tweet-link"><a href="https://x.com/RoundtableSpace/status/2030595632998580328" target="_blank">Voir le tweet original</a></div>
+<div class="section-label">Resume</div><p>Anthropic publie un guide de 33 pages dedie a la creation de skills pour Claude Code — des commandes personnalisees qui etendent les capacites de l'assistant.</p>
+<div class="section-label">Utilite</div><p>Ressource officielle pour apprendre a creer ses propres skills Claude Code, un levier majeur de productivite pour personnaliser l'outil a ses besoins.</p>
+<div class="section-label">Comment utiliser</div><p>Etudier le guide pour comprendre la structure des skills (frontmatter, logique, declencheurs) et en creer pour ses cas d'usage recurrents.</p>
+<div class="section-label">Mise en place</div><p>Telecharger le document, suivre les exemples pour creer une premiere skill simple, puis iterer vers des skills plus complexes integrant des workflows multi-etapes.</p>
+</div>
+<div class="card">
+<h2>Visualiser les Agent Teams de Claude Code</h2>
+<div class="author"><a href="https://x.com/_Re_ (citant dani_avila7)" target="_blank">@_Re_ (citant @dani_avila7)</a></div>
+<div class="tweet-link"><a href="https://x.com/_Re_/status/2029822011887825313" target="_blank">Voir le tweet original</a></div>
+<div class="section-label">Resume</div><p>Un outil de visualisation pour la fonctionnalite Agent Teams de Claude Code. Permet de voir en temps reel comment l'agent principal coordonne les sous-agents, via la commande `npx claude-code-templates@latest --teams`.</p>
+<div class="section-label">Utilite</div><p>Donne de la transparence sur le fonctionnement interne des equipes d'agents, essentiel pour debugger et optimiser ses workflows multi-agents.</p>
+<div class="section-label">Comment utiliser</div><p>Lancer la commande pour obtenir une vue complete de l'orchestration des agents dans son projet.</p>
+<div class="section-label">Mise en place</div><p>Executer `npx claude-code-templates@latest --teams` dans son terminal. Observer le graphe de coordination entre agents et ajuster sa configuration en consequence.</p>
+</div>
+<div class="card">
+<h2>Kaku : terminal macOS avec IA integree pour les devs</h2>
+<div class="author"><a href="https://x.com/CamilleRoux" target="_blank">@CamilleRoux</a></div>
+<div class="tweet-link"><a href="https://x.com/CamilleRoux/status/2029482073740730414" target="_blank">Voir le tweet original</a></div>
+<div class="section-label">Resume</div><p>Kaku v0.5 est un terminal macOS zero config, fork optimise de WezTerm (40% plus leger), avec correction d'erreurs de commande par IA, file manager integre (yazi), edition de ligne avancee et palette de commandes fuzzy.</p>
+<div class="section-label">Utilite</div><p>Un terminal moderne qui integre nativement l'IA pour assister le developpeur — corrige les erreurs de commande automatiquement, ce qui accelere le workflow terminal.</p>
+<div class="section-label">Comment utiliser</div><p>Remplacer son terminal actuel par Kaku pour beneficier de l'assistance IA en ligne de commande sans configuration.</p>
+<div class="section-label">Mise en place</div><p>Telecharger Kaku depuis le repo GitHub, l'installer sur macOS, et l'utiliser comme terminal principal. L'assistant IA est actif par defaut.</p>
+</div>
+<div class="card">
+<h2>Claude Code en action : des agents designers qui bossent en autonomie</h2>
+<div class="author"><a href="https://x.com/512banque" target="_blank">@512banque</a></div>
+<div class="tweet-link"><a href="https://x.com/512banque/status/2029332677858296245" target="_blank">Voir le tweet original</a></div>
+<div class="section-label">Resume</div><p>Temoignage sur la decouverte quotidienne de nouveaux usages de Claude Code, en citant une demo ou plusieurs agents Claude travaillent en parallele comme des "stagiaires designers" autonomes, generant du design a minuit pour 200€/mois.</p>
+<div class="section-label">Utilite</div><p>Illustre concretement le potentiel des agents IA paralleles pour le design et le developpement, et le changement de paradigme dans la production creative.</p>
+<div class="section-label">Comment utiliser</div><p>Explorer les capacites multi-agents de Claude Code pour deleguer des taches de design ou de code repetitives a plusieurs agents simultanement.</p>
+<div class="section-label">Mise en place</div><p>Configurer Claude Code avec des skills de design (frontend-design), lancer plusieurs agents en parallele via la fonctionnalite Agent Teams, et iterer sur les resultats produits.</p>
+</div>
+<div class="card">
+<h2>Academie IA gratuite par Anthropic (MCP, API, Claude Code)</h2>
+<div class="author"><a href="https://x.com/SouveraineTech" target="_blank">@SouveraineTech</a></div>
+<div class="tweet-link"><a href="https://x.com/SouveraineTech/status/2028365989566386198" target="_blank">Voir le tweet original</a></div>
+<div class="section-label">Resume</div><p>Anthropic a lance une academie gratuite comprenant 13 cours avec certifications officielles couvrant MCP (Model Context Protocol), les API Anthropic, Claude Code et la maitrise de Claude en general. Ce type de formation est habituellement facture autour de 2 000$.</p>
+<div class="section-label">Utilite</div><p>Formation officielle et gratuite directement par le createur de Claude. C'est la source la plus fiable pour apprendre a utiliser l'ecosysteme Anthropic, notamment MCP qui devient un standard pour connecter les LLM a des outils externes.</p>
+<div class="section-label">Comment utiliser</div><p>S'inscrire sur la plateforme academique d'Anthropic, suivre les cours dans l'ordre propose (commencer par les fondamentaux avant MCP et Claude Code), et passer les certifications pour valider ses competences.</p>
+<div class="section-label">Mise en place</div><p>1) Acceder a l'academie via le site d'Anthropic 2) Creer un compte 3) Suivre les modules dans l'ordre : fondamentaux Claude → API → MCP → Claude Code 4) Obtenir les certifications pour enrichir son profil professionnel.</p>
+</div>
+<div class="card">
+<h2>Claude Code pour generer des pages SEO a la chaine</h2>
+<div class="author"><a href="https://x.com/VengeonsP" target="_blank">@VengeonsP</a></div>
+<div class="tweet-link"><a href="https://x.com/VengeonsP/status/2027064392047567249" target="_blank">Voir le tweet original</a></div>
+<div class="section-label">Resume</div><p>Video de 11 minutes montrant comment utiliser Claude Code pour produire en masse des pages web optimisees SEO, dans le but de se positionner sur des mots cles business et generer du trafic organique monetisable.</p>
+<div class="section-label">Utilite</div><p>Demontre un cas d'usage concret de Claude Code pour l'automatisation de contenu SEO. Permet de scaler la production de pages sans externaliser a une agence couteuse.</p>
+<div class="section-label">Comment utiliser</div><p>Regarder la video pour comprendre le workflow : identification des mots cles → generation de contenu via Claude Code → publication. Adapter la methode a sa propre niche.</p>
+<div class="section-label">Mise en place</div><p>1) Installer Claude Code (CLI ou IDE) 2) Identifier ses mots cles cibles avec un outil SEO (Ahrefs, SEMrush) 3) Creer un template de page avec les instructions de generation 4) Utiliser Claude Code pour generer le contenu de chaque page 5) Publier et monitorer les positions.</p>
+</div>
+<div class="card">
+<h2>Guide complet DeepSearch : prompts et utilisation avancee</h2>
+<div class="author"><a href="https://x.com/RayaneRachid_" target="_blank">@RayaneRachid_</a></div>
+<div class="tweet-link"><a href="https://x.com/RayaneRachid_/status/2025441502030069879" target="_blank">Voir le tweet original</a></div>
+<div class="section-label">Resume</div><p>Video complete expliquant le fonctionnement de DeepSearch (recherche approfondie par IA), comment l'utiliser selon les cas d'usage, et surtout comment formuler ses prompts pour obtenir des resultats exploitables plutot qu'un simple resume.</p>
+<div class="section-label">Utilite</div><p>DeepSearch est une fonctionnalite cle des LLM modernes (ChatGPT, Perplexity, Gemini). Savoir bien prompter un DeepSearch fait la difference entre un resultat superficiel et une analyse vraiment actionnable.</p>
+<div class="section-label">Comment utiliser</div><p>Appliquer les techniques de prompting montrees dans la video : etre precis sur le format de sortie attendu, specifier le niveau de detail, et indiquer le contexte d'utilisation des resultats.</p>
+<div class="section-label">Mise en place</div><p>1) Regarder la video pour comprendre les bonnes pratiques 2) Tester DeepSearch sur un sujet que l'on maitrise pour evaluer la qualite 3) Affiner ses prompts en specifiant le format, la profondeur et l'objectif 4) Integrer DeepSearch dans sa routine de recherche/veille.</p>
+</div>
+<div class="card">
+<h2>9 prompts Claude pour le SEO (Claude Cowork)</h2>
+<div class="author"><a href="https://x.com/Jouhatsu_ai" target="_blank">@Jouhatsu_ai</a></div>
+<div class="tweet-link"><a href="https://x.com/Jouhatsu_ai/status/2023085164147228852" target="_blank">Voir le tweet original</a></div>
+<div class="section-label">Resume</div><p>Thread proposant 9 prompts avances pour utiliser Claude dans un contexte SEO professionnel, via la fonctionnalite Cowork. L'auteur affirme que ces prompts peuvent remplacer le travail d'une agence SEO a 10 000€/mois.</p>
+<div class="section-label">Utilite</div><p>Collection de prompts prets a l'emploi pour deleguer des taches SEO complexes a Claude : analyse de mots cles, optimisation on-page, strategie de contenu, etc. Fort engagement (2500+ bookmarks) indiquant une valeur percue elevee.</p>
+<div class="section-label">Comment utiliser</div><p>Recuperer les 9 prompts du thread, les adapter a son site/niche, et les executer dans Claude en mode Cowork pour obtenir des analyses et recommandations SEO detaillees.</p>
+<div class="section-label">Mise en place</div><p>1) Lire le thread complet pour recuperer les 9 prompts 2) Preparer les donnees de son site (URLs, mots cles actuels, concurrents) 3) Executer chaque prompt dans Claude 4) Appliquer les recommandations generees sur son site.</p>
+</div>
+<div class="card">
+<h2>Les meilleurs plugins Claude Code au quotidien</h2>
+<div class="author"><a href="https://x.com/DeFiMinty" target="_blank">@DeFiMinty</a></div>
+<div class="tweet-link"><a href="https://x.com/DeFiMinty/status/2021677256515498292" target="_blank">Voir le tweet original</a></div>
+<div class="section-label">Resume</div><p>Liste des meilleurs plugins/extensions pour Claude Code utilises quotidiennement par l'auteur. Tweet a tres fort engagement (4500+ bookmarks, 273k vues) suggerant une selection particulierement utile.</p>
+<div class="section-label">Utilite</div><p>Les plugins Claude Code permettent d'etendre considerablement les capacites de l'outil (memoire persistante, integration Git, outils de debug, etc.). Connaitre les meilleurs plugins fait gagner un temps considerable.</p>
+<div class="section-label">Comment utiliser</div><p>Consulter l'image jointe au tweet pour identifier les plugins recommandes, puis les installer via la configuration Claude Code.</p>
+<div class="section-label">Mise en place</div><p>1) Consulter la liste dans le tweet 2) Installer Claude Code si ce n'est pas fait 3) Ajouter les plugins un par un via les commandes d'installation 4) Configurer chaque plugin selon ses besoins 5) Tester sur un projet existant.</p>
+</div>
+<div class="card">
+<h2>Conseils d'utilisation de Claude Code par son createur Boris Cherny</h2>
+<div class="author"><a href="https://x.com/bcherny" target="_blank">@bcherny</a></div>
+<div class="tweet-link"><a href="https://x.com/bcherny/status/2017742741636321619" target="_blank">Voir le tweet original</a></div>
+<div class="section-label">Resume</div><p>Boris Cherny, createur de Claude Code, partage des conseils d'utilisation directement issus de l'equipe de developpement. Il souligne qu'il n'y a pas une seule bonne facon d'utiliser l'outil et que chaque setup est different. Tweet viral (104k bookmarks, 9M vues).</p>
+<div class="section-label">Utilite</div><p>Source de premiere main sur les meilleures pratiques Claude Code. Les conseils viennent directement du createur et de son equipe — c'est la reference absolue pour optimiser son usage de l'outil.</p>
+<div class="section-label">Comment utiliser</div><p>Lire le thread complet, identifier les conseils applicables a son propre workflow, et experimenter les differentes approches suggerees par l'equipe.</p>
+<div class="section-label">Mise en place</div><p>1) Lire le thread en entier 2) Noter les tips qui correspondent a son usage (solo dev, equipe, type de projet) 3) Implementer les conseils un par un 4) Adapter son CLAUDE.md et sa configuration en consequence.</p>
+</div>
+<div class="card">
+<h2>Claude-Mem : memoire persistante open-source pour Claude Code</h2>
+<div class="author"><a href="https://x.com/dr_cintas" target="_blank">@dr_cintas</a></div>
+<div class="tweet-link"><a href="https://x.com/dr_cintas/status/2017295582188995066" target="_blank">Voir le tweet original</a></div>
+<div class="section-label">Resume</div><p>Claude-Mem est un plugin gratuit et open-source qui ajoute une memoire persistante a Claude Code entre les sessions. Il promet une reduction de 95% des tokens utilises par session et 20x plus d'appels d'outils avant d'atteindre les limites de contexte.</p>
+<div class="section-label">Utilite</div><p>La perte de contexte entre sessions est un des principaux points de friction avec Claude Code. Ce plugin resout ce probleme en persistant la memoire, ce qui reduit les couts et augmente la productivite.</p>
+<div class="section-label">Comment utiliser</div><p>Installer le plugin depuis son repo GitHub, le configurer dans Claude Code, puis l'utiliser normalement — la memoire se construit automatiquement au fil des sessions.</p>
+<div class="section-label">Mise en place</div><p>1) Trouver le repo GitHub de Claude-Mem 2) Suivre les instructions d'installation 3) Configurer le plugin dans son environment Claude Code 4) Utiliser Claude Code normalement, la memoire se persist automatiquement 5) Verifier apres quelques sessions que le contexte est bien retenu.</p>
+</div>
+<div class="card">
+<h2>Creer un Skill /interview pour Claude Code</h2>
+<div class="author"><a href="https://x.com/YannDecoopman" target="_blank">@YannDecoopman</a></div>
+<div class="tweet-link"><a href="https://x.com/YannDecoopman/status/2013885138245972411" target="_blank">Voir le tweet original</a></div>
+<div class="section-label">Resume</div><p>Conseil pour creer un skill personnalise "/interview" dans Claude Code qui pose des questions approfondies avant de valider un plan, active le mode plan par defaut, recherche des alternatives existantes et se documente avant d'agir.</p>
+<div class="section-label">Utilite</div><p>Les Skills sont une fonctionnalite puissante de Claude Code pour standardiser des workflows. Ce skill "/interview" force Claude a mieux comprendre le besoin avant de coder, evitant les implementations hors-sujet.</p>
+<div class="section-label">Comment utiliser</div><p>Demander a Claude Code de creer ce skill en lui decrivant les comportements souhaites : poser des questions, activer le mode plan, chercher des alternatives, se documenter.</p>
+<div class="section-label">Mise en place</div><p>1) Ouvrir Claude Code dans son projet 2) Demander : "Cree un skill /interview qui pose des questions avant de valider un plan, active le mode plan, recherche des alternatives existantes et se documente" 3) Tester le skill sur un nouveau besoin 4) Iterer sur le comportement du skill selon les resultats.</p>
+</div>
+</article>
+<div class="footer">
+  Genere automatiquement chaque vendredi par clix + Claude
+</div>
+</body>
+</html>
